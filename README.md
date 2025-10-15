@@ -1,43 +1,77 @@
-# Redlands_Data_Modeling
-Final project for CSC-235
-Final Project Proposal
-feedback:
+# Redlands, CA Economic Modeling and Simulation
 
-This is good, but a little short on detail.  Where will you get the Redlands population data?  What drives population change other than growth rate?  Economic success(job rates), mental health (could add suicide rates and education rates), significant weather changes or temp changes that impact migration. Housing prices. 
+## 📊 Project Overview
 
-What will a 3/3 look like? - datausa redlands ca. Graphs should look similar. Able to model various rates, then use them to produce data that can be used to predict various successes for Redlands and other communities in the future very roughly. There will be a lot of analysis
-Extra possibly: predicting significant weather events or temperature increases or decreases, that can bridge to climate zone changes, can also model farms and corporate farms locally if impacting (or other impactors) and even corporate vs local make up.
- A 2/3? -
-A 1/3? - 
-* Do you have benchmarks/milestones for the next 2 weeks?
-_____________________________________________________________
-I want to focus on expanding topics from our population growth exercises and Project 2. While Project 2 focused on hypothetical situations, I want this Final to represent likely outcomes. I want to gather and display population data from my hometown of Redlands CA and use that to determine the future economic outlook for the city and see what the city is currently doing to expand its growth. Furthermore, I want to create a more accurate “projected population” graph for Redlands than what we covered during our practice exercises and Project 2 by adding in new variables such as number of people moving in per year, number of deaths (average), number of births, etc. With this, I can likely also display data on how many of the total residents are natively born there, or traveled to Redlands from somewhere else. I plan on getting initial data from the US Census website. My end goal however is to predict the future of the city in terms of population, demographics, and economic outlook. I chose this idea because Redlands is my home and I want to research and learn more about the city I grew up in and will soon return to.
-________________________________________________________________
-Terms
-in_migration
-Out_migration
-Deaths, births
-Income, jobs?
+This project is a data-driven simulation model developed in **Python** to forecast long-term economic trends for the city of Redlands, California. Using historical data and a multi-variable impact algorithm, the model generates projections for key economic indicators—most notably **median individual income**—extending through the year 2100.
 
-Steps/Timeline
-By thursday 
-Figure out the Equations/math we are using
-Collect data for California 
-Maybe pseudo code
+The primary goal was to explore the interconnected dynamics of local economic health and provide realistic forecasts by accounting for complex variables like inflation and labor market fluctuations.
 
-By Weekend
-Methods and some modeling
+---
 
-By Monday
-Presentation (progress check) 
+## ✨ Key Features & Technical Highlights
 
-By Thursday 
-Finish (includes analysis) and maybe extra stuff
-Sources:
-https://censusreporter.org/profiles/16000US0659962-redlands-ca/ -birth
-https://datausa.io/profile/geo/redlands-ca#demographics
-https://www.cityofredlands.org/post/city-profile  -birth
-https://data.chhs.ca.gov/dataset/live-birth-profiles-by-county - birth
-https://www.redlandsdailyfacts.com/2024/06/02/is-exploding-cost-of-raising-kids-going-to-shrink-southern-california/
-https://www.neighborhoodscout.com/ca/redlands/crime - crime 
+* **Python Simulation:** Developed a robust **Python simulation model** to forecast Redlands, CA, economic trends, with projections extending to **2100**.
+* **Algorithmic Modeling:** Designed and implemented a custom **simulation algorithm** to project median income based on the weighted influence of **five key economic factors** (e.g., unemployment, poverty rates, labor force size).
+* **Data Integration:** **Integrated and parsed historical economic data** using **Pandas** to establish baseline metrics and calculate long-term rates of change for all model inputs.
+* **Inflation Adjustment:** Modeled the effect of inflation, applying a **2.5% annual rate** (based on St. Louis Fed historical data) to the projected median income for realistic economic forecasting.
+* **Data Visualization:** Visualized **over eight distinct economic metrics** and multi-variable combo graphs using **Matplotlib** for comprehensive data interpretation.
+* **Version Control:** Code base managed through this **GitHub Repository**, facilitating collaboration and version tracking.
+
+---
+
+## ⚙️ Methodology & Model Inputs
+
+The core of the simulation is a novel impact-based algorithm that uses recent and long-term rates of change to extrapolate future values. The five primary economic indicators influencing the projected median individual income are:
+
+1.  **Unemployment**
+2.  **Employment**
+3.  **Poverty Rates**
+4.  **Labor Force Size**
+5.  **Population Change**
+
+The model then applies a **constant inflation factor** of 2.5% to the projected income values, resulting in two distinct output plots: one for nominal projected income and one for inflation-adjusted (real) projected income.
+
+---
+
+## 🛠️ Technical Stack
+
+* **Language:** Python
+* **Data Handling:** Pandas
+* **Visualization:** Matplotlib
+* **Numerical Operations:** NumPy
+* **Project Management:** GitHub / Git
+
+---
+
+## ▶️ Usage
+
+To run the simulation and generate the plots locally, you will need Python installed.
+
+1.  Clone the repository:
+    ```bash
+    git clone [YOUR_REPO_URL]
+    ```
+2.  Navigate to the project directory:
+    ```bash
+    cd Redlands-Economic-Modeling
+    ```
+3.  Install the required dependencies:
+    ```bash
+    pip install pandas matplotlib numpy
+    ```
+4.  Run the main simulation script:
+    ```bash
+    python redlands_simulation.py
+    ```
+    *The script will execute and display the generated economic plots.*
+
+---
+
+## 📈 Future Work
+
+This project laid the foundation for long-term economic modeling. Future iterations could include:
+
+* **Variable Integration:** Modeling additional complex factors such as migration patterns, crime rates, and climate impact.
+* **Model Refinement:** Analyzing past economic drops and increases to better calibrate the model's sensitivity coefficients for greater accuracy.
+* **External Factor Analysis:** Incorporating the specific economic impact of the University of Redlands to create a more localized, granular forecast.
 
